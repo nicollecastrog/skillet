@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @quest.name %>
+</p>
+
+<p>
+  <b>Points worth:</b>
+  <%= @quest.points_worth %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @quest.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<%= link_to 'Back', quests_path %>

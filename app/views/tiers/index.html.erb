@@ -1,0 +1,33 @@
+<h1>Listing tiers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Points worth</th>
+    <th>Directions</th>
+    <th>Serving size</th>
+    <th>Prep time</th>
+    <th>Approval votes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tiers.each do |tier| %>
+  <tr>
+    <td><%= tier.name %></td>
+    <td><%= tier.points_worth %></td>
+    <td><%= tier.directions %></td>
+    <td><%= tier.serving_size %></td>
+    <td><%= tier.prep_time %></td>
+    <td><%= tier.approval_votes %></td>
+    <td><%= link_to 'Show', tier %></td>
+    <td><%= link_to 'Edit', edit_tier_path(tier) %></td>
+    <td><%= link_to 'Destroy', tier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tier', new_tier_path %>

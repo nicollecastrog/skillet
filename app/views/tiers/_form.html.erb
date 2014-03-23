@@ -1,0 +1,41 @@
+<%= form_for(@tier) do |f| %>
+  <% if @tier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tier.errors.count, "error") %> prohibited this tier from being saved:</h2>
+
+      <ul>
+      <% @tier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :points_worth %><br />
+    <%= f.number_field :points_worth %>
+  </div>
+  <div class="field">
+    <%= f.label :directions %><br />
+    <%= f.text_area :directions %>
+  </div>
+  <div class="field">
+    <%= f.label :serving_size %><br />
+    <%= f.text_field :serving_size %>
+  </div>
+  <div class="field">
+    <%= f.label :prep_time %><br />
+    <%= f.text_field :prep_time %>
+  </div>
+  <div class="field">
+    <%= f.label :approval_votes %><br />
+    <%= f.number_field :approval_votes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  points_worth: 1
+  directions: MyText
+  serving_size: MyString
+  prep_time: MyString
+  approval_votes: 1
+
+two:
+  name: MyString
+  points_worth: 1
+  directions: MyText
+  serving_size: MyString
+  prep_time: MyString
+  approval_votes: 1

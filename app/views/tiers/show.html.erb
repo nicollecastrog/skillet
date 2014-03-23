@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tier.name %>
+</p>
+
+<p>
+  <b>Points worth:</b>
+  <%= @tier.points_worth %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @tier.directions %>
+</p>
+
+<p>
+  <b>Serving size:</b>
+  <%= @tier.serving_size %>
+</p>
+
+<p>
+  <b>Prep time:</b>
+  <%= @tier.prep_time %>
+</p>
+
+<p>
+  <b>Approval votes:</b>
+  <%= @tier.approval_votes %>
+</p>
+
+
+<%= link_to 'Edit', edit_tier_path(@tier) %> |
+<%= link_to 'Back', tiers_path %>
