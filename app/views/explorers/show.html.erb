@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @explorer.name %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @explorer.gender %>
+</p>
+
+
+<%= link_to 'Edit', edit_explorer_path(@explorer) %> |
+<%= link_to 'Back', explorers_path %>

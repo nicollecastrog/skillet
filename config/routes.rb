@@ -1,4 +1,11 @@
 Skillet::Application.routes.draw do
+  resources :explorers
+
+
+  devise_for :users
+
+  root :to => "pots#index"
+  
   resources :ingredients
 
 
