@@ -1,4 +1,6 @@
 class PotsController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /pots
   # GET /pots.json
   def index
@@ -20,6 +22,16 @@ class PotsController < ApplicationController
       format.json { render json: @pot }
     end
   end
+
+
+
+  def landing
+    respond_to do |format|
+      format.html
+    end
+  end
+
+
 
   # GET /pots/new
   # GET /pots/new.json

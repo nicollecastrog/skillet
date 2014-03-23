@@ -1,10 +1,24 @@
 Skillet::Application.routes.draw do
-  resources :explorers
 
+  devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
+  get "users/index"
+  get 'users/show' => 'users#show', as: 'dashboard'
 
-  devise_for :users
 
   root :to => "pots#index"
+  get '/pots/landing', to: 'pots#landing', as: 'landing'
+  get '/pots/feed', to: 'pots#feed', as: 'feed'
+  get '/pots/skill_building', to: 'pots#skill_building', as: 'pots_skill_building'
+  get '/pots/breakfast_brunch', to: 'pots#breakfast_brunch', as: 'pots_breakfast_brunch'
+  get '/pots/snacks_appetizers', to: 'pots#snacks_appetizers', as: 'pots_snacks_appetizers'
+  get '/pots/main_dishes', to: 'pots#main_dishes', as: 'pots_main_dishes'
+  get '/pots/healthy', to: 'pots#healthy', as: 'pots_healthy'
+  get '/pots/vegetarian', to: 'pots#vegetarian', as: 'pots_vegetarian'
+  get '/pots/baking', to: 'pots#baking', as: 'pots_baking'
+  get '/pots/desserts', to: 'pots#desserts', as: 'pots_desserts'
+
+  resources :explorers
+
   
   resources :ingredients
 
@@ -17,61 +31,4 @@ Skillet::Application.routes.draw do
 
   resources :tiers
 
-
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end

@@ -1,23 +1,40 @@
-<h1>Listing pots</h1>
+<div id="intro">
+      <h1>Explore the different Pots</h1>
+      <p>...to find a cooking quest that suits your fancy.</p>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  
+<div id="content">  
 
-<% @pots.each do |pot| %>
-  <tr>
-    <td><%= pot.name %></td>
-    <td><%= link_to 'Show', pot %></td>
-    <td><%= link_to 'Edit', edit_pot_path(pot) %></td>
-    <td><%= link_to 'Destroy', pot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <div id="pots_all">
 
-<br />
+    <div class="pot">
+      <%= link_to(image_tag("01pot_skill.svg"), pots_skill_building_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("02pot_breakfast.svg"), pots_breakfast_brunch_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("03pot_snacks.svg"), pots_snacks_appetizers_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("04pot_main.svg"), pots_main_dishes_path) %>
+    </div>
 
-<%= link_to 'New Pot', new_pot_path %>
+
+    <div class="pot">
+      <%= link_to(image_tag("05pot_healthy.svg"), pots_healthy_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("06pot_vegetarian.svg"), pots_vegetarian_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("07pot_baking.svg"), pots_baking_path) %>
+    </div>
+    <div class="pot">
+      <%= link_to(image_tag("08pot_desserts.svg"), pots_desserts_path) %>
+    </div>
+
+  </div> <!-- closes #pots_all -->
+
+</div> <!-- closes #content -->

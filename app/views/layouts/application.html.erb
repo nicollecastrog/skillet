@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Skillet</title>
+  <title>Skillet - Play. Learn. Cook.</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class='login'>
+<div id="header">
+  <div id="logo"><%= image_tag("logo.svg") %></div>
+  <div id="profile_corner">
     <% if current_user %>
-      <%= current_user.email %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+    <p>
+        Hello <%= current_user.email %><br>
+        <%= link_to "My Profile", edit_user_registration_path %><br>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>   
+    </p>
+    <h3>POINTS: <%= current_user.points %></h3>  
     <% else %>
-      <%= link_to "Sign In", new_user_session_path %>
-      <%= link_to "Register", new_user_registration_path %>
-    <% end %>
+      <p>
+        Start your cooking adventure today! Play. Learn. Cook.
+      </p>
+      <h3>
+        <%= link_to "SIGN UP", new_user_registration_path %>
+      </h3>
+      <% end %>
   </div>
-  
+
+  <div id="nav">
+    <% if current_user %>
+    <ul>
+      <li><%= link_to "Explore", pots_path %></li>
+      <li><%= link_to "Feed", feed_path %></li>
+      <li><%= link_to "Dashboard", dashboard_path %></li>
+    </ul>
+  <% end %>
+  </div>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+</div> <!-- closes #header -->
+
+<div id="main">
+
 <%= yield %>
+
+</div> <!-- closes #main -->
 
 </body>
 </html>

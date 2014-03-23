@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140323101404) do
+ActiveRecord::Schema.define(:version => 20140323182930) do
 
   create_table "explorers", :force => true do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20140323101404) do
     t.boolean  "status"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.text     "summary"
   end
 
   create_table "tiers", :force => true do |t|
@@ -55,6 +56,8 @@ ActiveRecord::Schema.define(:version => 20140323101404) do
     t.integer  "quest_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.text     "ingredients"
+    t.text     "description"
   end
 
   create_table "tiers_recipes", :id => false, :force => true do |t|
@@ -79,7 +82,7 @@ ActiveRecord::Schema.define(:version => 20140323101404) do
     t.string   "provider"
     t.string   "gender"
     t.string   "name"
-    t.integer  "points"
+    t.integer  "points",                 :default => 0,  :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

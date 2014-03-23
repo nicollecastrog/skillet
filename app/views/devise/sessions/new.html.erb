@@ -1,4 +1,10 @@
-<h2>Sign in</h2>
+<div id="intro">
+  <h1>Play. Learn. Cook.</h1>
+  <p>Selvage shabby chic literally, cred twee chillwave quinoa raw denim fanny pack bespoke lomo. Wes Anderson fingerstache Pinterest salvia, gluten-free squid Pitchfork gastropub Schlitz Vice seitan lomo pickled typewriter. Schlitz butcher Vice irony next level Etsy swag. Intelligentsia messenger bag lo-fi, street art synth raw denim sartorial. Try-hard dreamcatcher kitsch, Helvetica cliche paleo quinoa hoodie you probably haven't heard of them. Locavore kitsch narwhal leggings, VHS DIY quinoa you probably haven't heard of them Williamsburg put a bird on it Pitchfork direct trade. Ethical swag art party PBR banh mi Echo Park.
+  </p>  
+</div> <!-- closes #intro -->
+
+<div id="content"> 
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -15,3 +21,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div> <!-- closes #content -->
