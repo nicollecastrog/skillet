@@ -1,0 +1,39 @@
+  <div id="content">  
+
+    <div id="quests_all">
+
+      <!-- **************** -->
+      <!-- QUEST ITEM START -->
+      <!-- **************** -->
+
+      <% @pot.quests.each do |quest| %>
+      <div class="quest_item">
+
+        <div class="quest_icon">
+          <%= link_to(image_tag("tier_cake2.svg"), pots_skill_building_path) %>
+        </div> <!-- closes .quest_icon -->
+
+        <div class="quest_info">
+
+          <div class="quest_top_info">
+            <h4><%= quest.name %></h4>
+            <p># of tiers: <%= quest.tiers.count %></p>
+          </div> <!-- closes quest_top_info -->
+          <div class="quest_bottom_info">
+            <p><%= quest.description %></p>
+          </div> <!-- closes quest_bottom_info -->
+
+        </div> <!-- closes quest_info -->
+
+      </div> <!-- closes quest_item -->
+
+      <!-- **************** -->
+      <!-- **************** -->
+
+      <% end %>
+
+
+
+    </div> <!-- closes #quests_all -->
+
+  </div> <!-- closes #content -->

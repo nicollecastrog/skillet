@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :gender, :name, :points
   # attr_accessible :title, :body
 
   # after_create :send_welcome_email 

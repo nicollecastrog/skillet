@@ -1,5 +1,6 @@
 class Pot < ActiveRecord::Base
   attr_accessible :name
   
-  has_and_belongs_to_many :quests
+  has_many :pots_quests
+  has_many :quests, through: :pots_quests
 end

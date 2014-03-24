@@ -1,0 +1,9 @@
+<div class="go_back"><%= link_to "Back To All Pots", pots_path %></div>
+
+<div id="intro">
+  <h1><%= @pot.name %></h1>
+  <p>The Quests below contain tiers with easy, delicious recipes that simultaneously help you develop key cooking skills.</p>
+</div>
+
+  
+<%= render 'list_quests' %>

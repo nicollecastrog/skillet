@@ -1,0 +1,8 @@
+<div class="go_back"><%= link_to "Back To All Pots", pots_path %></div>
+
+<div id="intro">
+  <h1><%= @pot.name %></h1>
+  <p>The ultimate challenge, what everyone hopes to make, and do it well. Whether it's just a weekday meal for yourself or a proper dinner party with friends, you'll find quests of varying levels of difficulty here.</p>
+</div>
+
+<%= render 'list_quests' %>

@@ -23,6 +23,78 @@ class PotsController < ApplicationController
     end
   end
 
+  def skill_building
+    @pot = Pot.find(1)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def breakfast_brunch
+    @pot = Pot.find(2)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def snacks_appetizers
+    @pot = Pot.find(3)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def main_dishes
+    @pot = Pot.find(4)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def healthy
+    @pot = Pot.find(5)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def vegetarian
+    @pot = Pot.find(6)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def baking
+    @pot = Pot.find(7)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
+  def desserts
+    @pot = Pot.find(8)
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @pot }
+    end
+  end
+
 
 
   def landing

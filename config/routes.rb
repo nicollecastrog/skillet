@@ -20,9 +20,6 @@ Skillet::Application.routes.draw do
   resources :explorers
 
   
-  resources :ingredients
-
-
   resources :pots
 
 

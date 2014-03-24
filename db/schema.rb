@@ -11,17 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140323182930) do
+ActiveRecord::Schema.define(:version => 20140323200519) do
 
   create_table "explorers", :force => true do |t|
     t.string   "name"
     t.string   "gender"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "ingredients", :force => true do |t|
-    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -32,37 +26,35 @@ ActiveRecord::Schema.define(:version => 20140323182930) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "pots_quests", :id => false, :force => true do |t|
-    t.integer "pot_id"
-    t.integer "quest_id"
+  create_table "pots_quests", :force => true do |t|
+    t.integer  "pot_id"
+    t.integer  "quest_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "quests", :force => true do |t|
     t.string   "name"
-    t.integer  "points_worth"
+    t.integer  "points_worth", :default => 10, :null => false
     t.boolean  "status"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.text     "summary"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.text     "description"
   end
 
   create_table "tiers", :force => true do |t|
     t.string   "name"
-    t.integer  "points_worth"
+    t.integer  "points_worth",   :default => 10, :null => false
     t.text     "directions"
     t.string   "serving_size"
     t.string   "prep_time"
-    t.integer  "approval_votes"
+    t.integer  "approval_votes", :default => 0,  :null => false
     t.integer  "quest_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.text     "ingredients"
     t.text     "description"
-  end
-
-  create_table "tiers_recipes", :id => false, :force => true do |t|
-    t.integer "tier_id"
-    t.integer "recipe_id"
+    t.string   "cook_time"
   end
 
   create_table "users", :force => true do |t|
