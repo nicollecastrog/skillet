@@ -73,6 +73,10 @@ a {
   margin-left: 15px;
 }
 
+#profile_corner p span {
+  color: #F46F22;
+}
+
 #profile_corner h3 {
   font-family: 'ostrich_sans_inlineregular', sans-serif;
   letter-spacing: 2px;
@@ -224,34 +228,6 @@ a {
   background: url('pizza2.jpg') no-repeat 50% 50%;
   background-size: 220px 220px;
   display: block;
-}
-
-div:nth-child(2) > div.gon {
-  background: url('cupcakes.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(3) > div.gon {
-  background: url('pasta.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(4) > div.gon {
-  background: url('grilling.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(5) > div.gon {
-  background: url('soup.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(6) > div.gon {
-  background: url('cookies.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(7) > div.gon {
-  background: url('pizza3.jpg') no-repeat 50% 50%;
-}
-
-div:nth-child(8) > div.gon {
-  background: url('bread.jpg') no-repeat 50% 50%;
 }
 
 .penta {
@@ -417,6 +393,7 @@ div:nth-child(8) > div.gon {
   float: left;
   padding-left: 25px;
   padding-top: 13px;
+  max-width: 80%;
 }
 
 .tier_item_top h4 span {
@@ -456,6 +433,12 @@ div:nth-child(8) > div.gon {
 
 .tier_item_bottom p span {
   color: #F46F22;
+}
+
+.tier_item_bottom .reminder {
+  color: #19BEBE;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 .ingredients ul {
@@ -559,6 +542,42 @@ div:nth-child(8) > div.gon {
   color: #F46F22;
 }
 
+.tier_submit_uploader {
+  margin-bottom: 20px;
+}
+
+.tier_submit_uploader > label {
+  color: #F46F22;
+}
+
+.tier_submit_uploader input {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300; 
+  margin-top: 8px;
+}
+
+.tier_submit_caption > label {
+  color: #F46F22;
+}
+
+#feed_item_tier_caption {
+  max-width: 97%;
+  max-height: 100px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+.tier_submit_btn input {
+  background-color: #F46F22;
+  color: white;
+  font-family: 'ostrich_sans_inlineregular', sans-serif;
+  letter-spacing: 2px;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  float: right;
+  margin-bottom: 15px;
+}
 
 
 

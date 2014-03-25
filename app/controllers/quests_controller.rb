@@ -14,6 +14,7 @@ class QuestsController < ApplicationController
   # GET /quests/1.json
   def show
     @quest = Quest.find(params[:id])
+    @feed_item = FeedItem.new
 
     respond_to do |format|
       format.html # show.html.erb

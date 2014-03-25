@@ -1,0 +1,29 @@
+<%= form_for @feed_item, :url => feed_items_path do |f| %>
+  <% if @feed_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed_item.errors.count, "error") %> prohibited this feed_item from being saved:</h2>
+
+      <ul>
+      <% @feed_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= hidden_field_tag :tier_id, @current_tier_id %>
+  <div class="field tier_submit_uploader">
+    <%= f.label :tier_image %><br />
+    <%= f.file_field :tier_image, :required => true %>
+  </div>
+
+  <div class="field tier_submit_caption">
+    <%= f.label :tier_caption %><br />
+    <%= f.text_area :tier_caption, :required => true %>
+  </div>
+
+  <div class="actions tier_submit_btn">
+    <%= f.submit "Submit Tier"%>
+  </div>
+<% end %>

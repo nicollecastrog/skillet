@@ -11,19 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="field tier_submit_uploader">
+    <%= f.label :tier_image %><br />
+    <%= f.file_field :tier_image %>
   </div>
-  <div class="field">
-    <%= f.label :points_worth %><br />
-    <%= f.number_field :points_worth %>
+
+  <div class="field tier_submit_caption">
+    <%= f.label :tier_caption %><br />
+    <%= f.text_field :tier_caption %>
   </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.check_box :status %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="actions tier_submit_btn">
+    <%= f.submit "Submit Tier"%>
   </div>
 <% end %>

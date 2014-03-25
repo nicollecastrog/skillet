@@ -1,5 +1,8 @@
 Skillet::Application.routes.draw do
 
+  resources :feed_items
+
+
   devise_for :users, :controllers => {:omniauth_callbacks => 'omniauth_callbacks'}
   get "users/index"
   get 'users/show' => 'users#show', as: 'dashboard'
@@ -7,7 +10,6 @@ Skillet::Application.routes.draw do
 
   root :to => "pots#index"
   get '/pots/landing', to: 'pots#landing', as: 'landing'
-  get '/pots/feed', to: 'pots#feed', as: 'feed'
 
   get '/pots/skill_building', to: 'pots#skill_building', as: 'pots_skill_building'
   get '/pots/breakfast_brunch', to: 'pots#breakfast_brunch', as: 'pots_breakfast_brunch'
@@ -28,5 +30,6 @@ Skillet::Application.routes.draw do
 
 
   resources :tiers
+  get '/feed/', to: 'feed_items#index', as: 'feed'
 
 end

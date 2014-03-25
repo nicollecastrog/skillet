@@ -11,13 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140324185630) do
+ActiveRecord::Schema.define(:version => 20140325165241) do
 
   create_table "explorers", :force => true do |t|
     t.string   "name"
     t.string   "gender"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "feed_items", :force => true do |t|
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "tier_image"
+    t.text     "tier_caption"
+    t.integer  "approval_votes", :default => 0
+    t.string   "user_email"
+    t.integer  "tier_id"
+    t.boolean  "submit_status",  :default => false
+    t.string   "approver_email"
   end
 
   create_table "pots", :force => true do |t|
@@ -45,18 +57,16 @@ ActiveRecord::Schema.define(:version => 20140324185630) do
 
   create_table "tiers", :force => true do |t|
     t.string   "name"
-    t.integer  "points_worth",   :default => 10,    :null => false
+    t.integer  "points_worth", :default => 10, :null => false
     t.text     "directions"
     t.string   "serving_size"
     t.string   "prep_time"
-    t.integer  "approval_votes", :default => 0,     :null => false
     t.integer  "quest_id"
-    t.datetime "created_at",                        :null => false
-    t.datetime "updated_at",                        :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.text     "ingredients"
     t.text     "description"
     t.string   "cook_time"
-    t.boolean  "submit_status",  :default => false
     t.integer  "tier_number"
   end
 

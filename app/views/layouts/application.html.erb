@@ -15,8 +15,9 @@
   </div>
   <div id="profile_corner">
     <% if current_user %>
+      <% user_array = current_user.email.split('@') %>
     <p>
-        Hello <%= current_user.email %><br>
+        Hello <span><%= user_array.first %></span><br>
         <%= link_to "My Profile", edit_user_registration_path %><br>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>   
     </p>

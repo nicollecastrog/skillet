@@ -1,0 +1,36 @@
+<div id="intro">
+  <h1>Check out the live Feed</h1>
+  <p>...to see what recipes others have completed. These users have finished tiers that need two approval votes before they can receive their hard-earned points. Take the time to "check" their work and earn bonus points yourself! Remember, Skillet is a community.You need others to check your recipes too, so be a pal and and check theirs. Plus, it's fun to see what all the other chefs-to-be have been up to!</p>
+</div>
+
+<% @feed_items.each do |feed_item| %>
+
+<div id="content"> 
+
+  <% if feed_item.approval_votes < 2 %>
+
+  <div id="feed_all">
+
+    <div class="feed_item">
+      <div class="penta gon" id="<%= feed_item.id %>-feed-pic" style="background: url('<%=feed_item.tier_image.detail.url%>') no-repeat 50% 50%;">
+      </div>
+      <div class="feed_textbox">
+        <% usr_array = feed_item.user_email.split('@') %>
+        <p><%= usr_array.first %> completed:</p>
+        <h3>QUEST NAME</h3>
+        <h4>Tier <%= feed_item.tier_id %></h4>
+        <button>Approve</button>
+      </div>
+    </div>
+
+  </div> <!-- closes #feed_all -->
+
+  <% end %>  
+
+
+</div> <!-- closes #content -->
+
+<% end %>
+
+
+

@@ -101,6 +101,15 @@ class PotsController < ApplicationController
     end
   end
 
+  def feed
+    # @pot = Pot.find(params[:id])
+
+    respond_to do |format|
+      format.html # feed.html.erb
+      # format.json { render json: @pot }
+    end
+  end
+
 
 
 

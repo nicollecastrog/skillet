@@ -2,22 +2,24 @@
 
   <div id="tiers_all">
 
-    <% c = @quest.counter %>
-
-
     <% @quest.tiers.each do |tier| %>
 
-      <% if tier.tier_number <= c %>
+      <% if tier.tier_number <= @quest.counter %>
 
       <div class="tier_item">
 
         <div class="tier_item_top">
-          <h4>Tier #1: <span><%= tier.name %></span></h4>
+          <h4>Tier #<%= tier.tier_number%>: <span><%= tier.name %></span></h4>
           <button class="less_more">LESS</button>
         </div>
 
         <div class="tier_item_bottom">
           <p><%= tier.description %></p>
+
+          <% if tier.submit_status == false %>
+            <p class="reminder">Don't forget to take a PHOTO of your dish! You'll need to unlock the next tier in this quest.</p>
+          <% end %>
+
           <p><span>Serving Size: </span><%= tier.serving_size %></p>
           <p><span>Prep Time: </span><%= tier.prep_time %></p>
           <p><span>Total Recipe Time: </span><%= tier.cook_time %></p>
@@ -37,7 +39,9 @@
               <% end %>
             </ol>
           </p>
-          <% if tier.submit_status == false%>
+          <% if tier.submit_status == false %>
+
+            <% @current_tier_id = tier.id %>
             <div class="completed_btn_div">
               <button class="completed">Completed!</button>
             </div>
@@ -55,16 +59,18 @@
           <div class="tier_submit_form_bottom">
             <div class="tier_submit_form_bottom_inner">
               <p>Congratulations! You've completed <span><%= @quest.name %>, Tier <%= tier.tier_number %>: <%= tier.name %>.</span><br><br>
-                By completing this tier you've unlocked access to the next tier in this quest. But, before you can get your hard-earned points, you have to submit some proof of your labor.<br><br>
-                Upload a photo of your dish and a short caption outlining your experience making this recipe. Your photo and caption will then get submitted to the feed. Once your work is approvedy by two other users, you'll get you points.<br><br>
+                By completing this tier you've unlocked access to the next tier in this quest. But, before you can get your hard-earned points, you have to submit some proof of your cooking smarts.<br><br>
+                So, please upload a photo of your dish and a short caption outlining your experience making this recipe. Your photo and caption will then get submitted to the feed. Once your work is approvedy by two other users, you'll get your points.<br><br>
                 In the meantime, keep playing and cooking!</p>
+
+              <%= render 'submit_tier' %>
             </div>
           </div>
         </div>
 
       </div> <!-- closes tier_item -->
 
-      <% end %> <!-- closes tier_number <= c  IF statement-->
+      <% end %> <!-- closes tier_number <= @quest.counter  IF statement-->
 
     <% end %> <!-- closes @quest.tiers.each -->
 
