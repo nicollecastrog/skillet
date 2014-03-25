@@ -8,6 +8,7 @@ Skillet::Application.routes.draw do
   root :to => "pots#index"
   get '/pots/landing', to: 'pots#landing', as: 'landing'
   get '/pots/feed', to: 'pots#feed', as: 'feed'
+
   get '/pots/skill_building', to: 'pots#skill_building', as: 'pots_skill_building'
   get '/pots/breakfast_brunch', to: 'pots#breakfast_brunch', as: 'pots_breakfast_brunch'
   get '/pots/snacks_appetizers', to: 'pots#snacks_appetizers', as: 'pots_snacks_appetizers'

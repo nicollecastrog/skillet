@@ -95,13 +95,15 @@ class PotsController < ApplicationController
     end
   end
 
-
-
   def landing
     respond_to do |format|
       format.html
     end
   end
+
+
+
+
 
 
 

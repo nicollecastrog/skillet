@@ -10,13 +10,13 @@
       <div class="quest_item">
 
         <div class="quest_icon">
-          <%= link_to(image_tag("tier_cake2.svg"), pots_skill_building_path) %>
+          <%= link_to(image_tag("tier_cake2.svg"), quest) %>
         </div> <!-- closes .quest_icon -->
 
         <div class="quest_info">
 
           <div class="quest_top_info">
-            <h4><%= quest.name %></h4>
+            <h4><%= link_to "#{quest.name}", quest %></h4>
             <p># of tiers: <%= quest.tiers.count %></p>
           </div> <!-- closes quest_top_info -->
           <div class="quest_bottom_info">

@@ -1,5 +1,5 @@
 class Quest < ActiveRecord::Base
-  attr_accessible :name, :points_worth, :status, :description, :pots_ids, :pots_quests_attributes, :pots_quests
+  attr_accessible :name, :points_worth, :status, :description, :pots_ids, :pots_quests_attributes, :pots_quests, :counter
 
   has_many :tiers
 
