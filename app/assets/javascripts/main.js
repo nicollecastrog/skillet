@@ -1,7 +1,8 @@
 $( document ).ready(function() {
 
   $(".less_more").click(function() {
-    $(".tier_item_bottom").slideToggle("slow");
+    var parent = $(this).closest('.tier_item');
+    $(".tier_item_bottom",parent).slideToggle("slow");
     if($(this).html() == 'LESS'){
            $(this).html('MORE');
        } else {

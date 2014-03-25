@@ -43,7 +43,7 @@ class FeedItemsController < ApplicationController
     @feed_item = FeedItem.new(params[:feed_item])
     @feed_item.user_email = current_user.email
     @feed_item.tier_id = params[:tier_id]
-    # @quest.counter += 1
+    @feed_item.submit_status = true
 
     respond_to do |format|
       if @feed_item.save

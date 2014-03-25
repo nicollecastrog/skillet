@@ -37,7 +37,7 @@ class TierImageUploader < CarrierWave::Uploader::Base
   end
 
   version :detail do
-    process :resize_to_fill => [220, 220]
+    process :resize_to_fill => [230, 230]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

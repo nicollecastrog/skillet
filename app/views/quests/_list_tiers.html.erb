@@ -1,76 +1,83 @@
 <div id="content">  
 
   <div id="tiers_all">
+    <% counter = 1 %>
 
     <% @quest.tiers.each do |tier| %>
 
-      <% if tier.tier_number <= @quest.counter %>
+    <% f = tier.feed_items.first %>
 
-      <div class="tier_item">
+      <% if (f.nil? && tier.tier_number == 1) || (f.nil? == false && f.submit_status == true) %>
+        <% counter += 1 %>
+      <% end %>
 
-        <div class="tier_item_top">
-          <h4>Tier #<%= tier.tier_number%>: <span><%= tier.name %></span></h4>
-          <button class="less_more">LESS</button>
-        </div>
 
-        <div class="tier_item_bottom">
-          <p><%= tier.description %></p>
+      <% if (f.nil? && tier.tier_number == 1) || (tier.tier_number <= counter) %>
 
-          <% if tier.submit_status == false %>
-            <p class="reminder">Don't forget to take a PHOTO of your dish! You'll need to unlock the next tier in this quest.</p>
-          <% end %>
+        <div class="tier_item">
 
-          <p><span>Serving Size: </span><%= tier.serving_size %></p>
-          <p><span>Prep Time: </span><%= tier.prep_time %></p>
-          <p><span>Total Recipe Time: </span><%= tier.cook_time %></p>
-          <p><span>Ingredients: </span>
-            <ul class="ingredients">
-              <% array = tier.ingredients.split(', ')%>
-              <% array.each do |i| %>
-              <li><%= i %></li>
-              <% end %>
-            </ul>
-          </p>
-          <p><span>Directions: </span>
-            <ol class="directions">
-              <% array = tier.directions.split(/\d\)\s/)%>
-              <% array.each do |d| %>
-              <li><%= d %></li>
-              <% end %>
-            </ol>
-          </p>
-          <% if tier.submit_status == false %>
-
-            <% @current_tier_id = tier.id %>
-            <div class="completed_btn_div">
-              <button class="completed">Completed!</button>
-            </div>
-          <% end %>
-        </div> <!-- closes tier_item_bottom -->
-
-        <div class="tier_submit_form centered hidden">
-          <div class="tier_submit_form_top">
-            <div class="tier_submit_form_top_text">
-              <h5>Submit Tier <%= tier.tier_number %></h5>
-              <h4><%= tier.name %></h4>
-            </div>
-            <button class="close_tier_submit_form">X</button>
+          <div class="tier_item_top">
+            <h4>Tier #<%= tier.tier_number%>: <span><%= tier.name %></span></h4>
+            <button class="less_more">LESS</button>
           </div>
-          <div class="tier_submit_form_bottom">
-            <div class="tier_submit_form_bottom_inner">
-              <p>Congratulations! You've completed <span><%= @quest.name %>, Tier <%= tier.tier_number %>: <%= tier.name %>.</span><br><br>
-                By completing this tier you've unlocked access to the next tier in this quest. But, before you can get your hard-earned points, you have to submit some proof of your cooking smarts.<br><br>
-                So, please upload a photo of your dish and a short caption outlining your experience making this recipe. Your photo and caption will then get submitted to the feed. Once your work is approvedy by two other users, you'll get your points.<br><br>
-                In the meantime, keep playing and cooking!</p>
 
-              <%= render 'submit_tier' %>
+          <div class="tier_item_bottom">
+            <p><%= tier.description %></p>
+
+            <% if (f.nil?) %>
+              <p class="reminder">Don't forget to take a PHOTO of your dish! You'll need to unlock the next tier in this quest.</p>
+            <% end %>
+
+            <p><span>Serving Size: </span><%= tier.serving_size %></p>
+            <p><span>Prep Time: </span><%= tier.prep_time %></p>
+            <p><span>Total Recipe Time: </span><%= tier.cook_time %></p>
+            <p><span>Ingredients: </span>
+              <ul class="ingredients">
+                <% array = tier.ingredients.split(', ')%>
+                <% array.each do |i| %>
+                <li><%= i %></li>
+                <% end %>
+              </ul>
+            </p>
+            <p><span>Directions: </span>
+              <ol class="directions">
+                <% array = tier.directions.split(/\d\)\s/)%>
+                <% array.each do |d| %>
+                <li><%= d %></li>
+                <% end %>
+              </ol>
+            </p>
+
+            <% if (f.nil?) %>
+              <% @current_tier_id = tier.id %>
+              <div class="completed_btn_div">
+                <button class="completed">Completed!</button>
+              </div>
+            <% end %>
+          </div> <!-- closes tier_item_bottom -->
+
+          <div class="tier_submit_form centered hidden">
+            <div class="tier_submit_form_top">
+              <div class="tier_submit_form_top_text">
+                <h5>Submit Tier <%= tier.tier_number %></h5>
+                <h4><%= tier.name %></h4>
+              </div>
+              <button class="close_tier_submit_form">X</button>
+            </div>
+            <div class="tier_submit_form_bottom">
+              <div class="tier_submit_form_bottom_inner">
+                <p>Congratulations! You've completed <span><%= @quest.name %>, Tier <%= tier.tier_number %>: <%= tier.name %>.</span><br><br>
+                  By completing this tier you've unlocked access to the next tier in this quest. But, before you can get your hard-earned points, you have to submit some proof of your cooking smarts.<br><br>
+                  So, please upload a photo of your dish and a short caption outlining your experience making this recipe. Your photo and caption will then get submitted to the feed. Once your work is approvedy by two other users, you'll get your points.<br><br>
+                  In the meantime, keep playing and cooking!</p>
+
+                <%= render 'submit_tier' %>
+              </div>
             </div>
           </div>
-        </div>
+        </div> <!-- closes tier_item -->
 
-      </div> <!-- closes tier_item -->
-
-      <% end %> <!-- closes tier_number <= @quest.counter  IF statement-->
+      <% end %> <!--closes if statement to control Tier display-->
 
     <% end %> <!-- closes @quest.tiers.each -->
 
