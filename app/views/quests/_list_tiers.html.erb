@@ -5,11 +5,11 @@
 
     <% @quest.tiers.each do |tier| %>
 
-    <% f = tier.feed_items.first %>
+    <% f = tier.feed_items.where(user_email: current_user.email).first %>
 
-      <% if (f.nil? && tier.tier_number == 1) || (f.nil? == false && f.submit_status == true) %>
+      <% if (f.nil? == false && f.submit_status == true) %>
         <% counter += 1 %>
-      <% end %>
+      <% end %>      
 
 
       <% if (f.nil? && tier.tier_number == 1) || (tier.tier_number <= counter) %>
