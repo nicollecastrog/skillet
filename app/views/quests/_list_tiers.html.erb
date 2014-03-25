@@ -18,10 +18,11 @@
 
           <div class="tier_item_top">
             <h4>Tier #<%= tier.tier_number%>: <span><%= tier.name %></span></h4>
-            <button class="less_more">LESS</button>
+            <button class="less_more">MORE</button>
+            <div class="clear tier_item_top_fix"></div>
           </div>
 
-          <div class="tier_item_bottom">
+          <div class="tier_item_bottom hidden">
             <p><%= tier.description %></p>
 
             <% if (f.nil?) %>

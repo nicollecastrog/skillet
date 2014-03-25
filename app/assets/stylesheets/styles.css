@@ -372,8 +372,11 @@ a {
 
 .tier_item {
   width: 60%;
+  margin-bottom: 30px;
+}
+
+.tier_item:first-child {
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .tier_item_top {
@@ -414,6 +417,10 @@ a {
   letter-spacing: 2px;
   font-size: 22px;
   outline: none;
+}
+
+.tier_item_top_fix {
+  padding-bottom: 13px;
 }
 
 .tier_item_bottom {
