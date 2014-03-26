@@ -144,7 +144,8 @@ a {
 
 #intro {
   margin-left: 60px;
-  width: 60%;
+  display: block;
+  clear: both;
 }
 
 #intro h1 {
@@ -154,11 +155,13 @@ a {
   color: #19bebe;
   font-size: 3em;
   text-align: left;
+  width: 60%;
 }
 
 #intro p {
   margin-top: 0px;
   text-align: left;
+  width: 60%;
 }
 
 .go_back {
@@ -211,15 +214,16 @@ a {
 
 
 #feed_all {
-/*  margin-left: 60px;*/
-  /*padding-bottom: 20px;*/
+  padding-top: 20px;
 }
 
 .feed_item {
   display: inline-block;
   width: 220px;
   margin: 0 auto;
-  padding: 20px 60px 20px 0px;
+  padding: 0px 60px 20px 0px;
+  margin-top: 20px;
+  vertical-align: top;
 }
 
 .gon {
@@ -502,6 +506,7 @@ a {
   padding-left: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
+  max-width: 88%;
 }
 
 .tier_submit_form_top_text h5 {
@@ -539,6 +544,8 @@ a {
 
 .tier_submit_form_bottom_inner {
   padding: 20px;
+  max-height: 100%; 
+  margin-bottom: 10px;
 }
 
 .tier_submit_form_bottom_inner p {
@@ -600,6 +607,8 @@ a {
 .hidden {
   display: none;
 }
+
+
 
 
 

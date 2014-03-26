@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20140325201401) do
   create_table "quests", :force => true do |t|
     t.string   "name"
     t.integer  "points_worth", :default => 10, :null => false
-    t.boolean  "status"
+    t.boolean  "status",  :default => false
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.text     "description"
