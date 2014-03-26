@@ -135,6 +135,15 @@ a {
   padding-left: 15px;
 }
 
+.notice, .alert {
+  max-width: 80%;
+  margin: 0 auto;
+  color: #F46F22;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
 #main {
   background-color: white;
   background: url("bg6.png");
@@ -183,15 +192,116 @@ a {
   color: #19bebe;
 }
 
-
-
-
 #content {
   display: block;
   min-height: 100%;
   margin-left: 60px;
   padding-bottom: 20px;
 }
+
+#landing_content {
+  background: url("landing_bg1.jpg");
+  /* the follow is the code to have the image display as a full page */
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-size: cover; /* the next 3 lines are "browser prefixes", they are necessary to include for CSS3 techniques */
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 16%;
+  min-height: 100%;
+  width: 84%;
+}
+
+#landing_intro {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: block;
+  clear: both;
+}
+
+#landing_intro h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 36px;
+  padding-bottom: 10px;
+  font-family: 'ostrich_sans_inlineregular', sans-serif;
+  color: #19bebe;
+  font-size: 3em;
+  text-align: left;
+  width: 60%;
+  margin-left: 60px;
+}
+
+#landing_intro p {
+  margin-top: 0px;
+  text-align: left;
+  width: 60%;
+  margin-left: 60px;
+  padding-bottom: 27px;
+}
+
+.devise_stuff {
+  max-width: 35%;
+}
+
+.devise_remember {
+  margin-top: 10px;
+}
+
+div.devise_btn {
+  display: inline-block;
+  float: left;
+}
+
+.devise_btn input {
+  display: inline-block;
+  float: left;
+  font-family: 'ostrich_sans_inlineregular', sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  background-color: #19bebe;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  margin-top: 12px;
+}
+
+.devise_shared_links {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  max-width: 80%;
+  margin-top: -32px;
+}
+
+.devise_shared_links_sign_up {
+  display: inline-block;
+  float: right;
+  text-align: right;
+  max-width: 79%;
+  margin-top: -10px;
+}
+
+#devise_sign_up_btn, #devise_sign_in_btn {
+  color: #F46F22;
+}
+
+/*#new_user > div.devise_stuff > div.devise_shared_links > a:nth-child(1) {
+  color: #F46F22;
+}*/
+
+#fb_btn > img {
+  height: 50%;
+  width: 50%;
+  margin-top: 8px;
+}
+
+
+
+
 
 .pot {
   display: inline-block;
@@ -213,7 +323,7 @@ a {
   margin-right: 24px;
 }*/
 
-/
+
 
 
 

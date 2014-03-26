@@ -1,6 +1,8 @@
-<div id="intro">
+<div id="landing_intro">
   <h1>Play. Learn. Cook.</h1>
-  <p>Selvage shabby chic literally, cred twee chillwave quinoa raw denim fanny pack bespoke lomo. Wes Anderson fingerstache Pinterest salvia, gluten-free squid Pitchfork gastropub Schlitz Vice seitan lomo pickled typewriter. Schlitz butcher Vice irony next level Etsy swag. Intelligentsia messenger bag lo-fi, street art synth raw denim sartorial. Try-hard dreamcatcher kitsch, Helvetica cliche paleo quinoa hoodie you probably haven't heard of them. Locavore kitsch narwhal leggings, VHS DIY quinoa you probably haven't heard of them Williamsburg put a bird on it Pitchfork direct trade. Ethical swag art party PBR banh mi Echo Park.
+  <p>
+    At Skillet we believe that there's no reason why learning to cook should be a chore. Explore the different categories (we call them "pots") and embark upon cooking quests designed to teach you a compact set of skills; each recipe builds upon the knowledge you acquired in the previous one.<br>
+    So what comes first, the cooking or the game? Both!
   </p>  
 </div> <!-- closes #intro -->
 
@@ -14,12 +16,19 @@
   <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div class="devise_remember"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
   <% end -%>
 
-  <div><%= f.submit "Sign in" %></div>
+  <div class="devise_stuff">
+    <div class ="devise_btn">
+      <%= f.submit "Sign in" %>
+    </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+    <div class="devise_shared_links">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
 
 </div> <!-- closes #content -->
+
+

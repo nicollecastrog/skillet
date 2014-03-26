@@ -1,4 +1,12 @@
-<h2>Sign up</h2>
+<div id="landing_intro">
+  <h1>Sign Up</h1>
+  <p>
+    At Skillet we believe that there's no reason why learning to cook should be a chore. Explore the different categories (we call them "pots") and embark upon cooking quests designed to teach you a compact set of skills; each recipe builds upon the knowledge you acquired in the previous one.<br>
+    So what comes first, the cooking or the game? Both!
+  </p>  
+</div> <!-- closes #intro -->
+
+<div id="content"> 
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -12,7 +20,14 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div class="devise_stuff">
+    <div class ="devise_btn">
+      <%= f.submit "Sign up" %>
+    </div>
 <% end %>
+    <div class="devise_shared_links_sign_up">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
 
-<%= render "devise/shared/links" %>
+</div> <!-- closes #content -->
