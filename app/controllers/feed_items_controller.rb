@@ -2,7 +2,8 @@ class FeedItemsController < ApplicationController
   # GET /feed_items
   # GET /feed_items.json
   def index
-    @feed_items = FeedItem.all
+    f = FeedItem.order('id DESC')
+    @feed_items = f.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,10 +16,11 @@ class FeedItemsController < ApplicationController
   def show
     @feed_item = FeedItem.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @feed_item }
-    end
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @feed_item }
+    # end
+    redirect_to feed_path
   end
 
   # GET /feed_items/new
@@ -40,6 +42,7 @@ class FeedItemsController < ApplicationController
   # POST /feed_items
   # POST /feed_items.json
   def create
+    @feed_items = FeedItem.all
     @feed_item = FeedItem.new(params[:feed_item])
     @feed_item.user_email = current_user.email
     @feed_item.tier_id = params[:tier_id]
