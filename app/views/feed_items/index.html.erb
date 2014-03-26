@@ -16,19 +16,50 @@
           </div>
           <div class="feed_textbox">
             <% usr_array = feed_item.user_email.split('@') %>
-            <p><%= usr_array.first %> completed:</p>
+            <p class="feed_textbox_p"><%= usr_array.first %> completed:</p>
 
             <% tid = feed_item.tier_id %>
             <% t = Tier.find(tid) %>
             <% r = t.quest_id %>
             <% q = Quest.find(r) %>
 
-            <h3><%= q.name %></h3>
+            <h3 class="feed_textbox_h3"><%= q.name %></h3>
 
-            <h4>Tier <%= t.tier_number %></h4>
-            <button>Approve</button>
-          </div>
-        </div>
+            <h4 class="feed_textbox_h4">Tier <%= t.tier_number %></h4>
+
+            <button class="approval">Approve</button>
+
+            <div class="approval_form centered hidden">
+              <div class="approval_form_top">
+                <button class="close_approval_form">X</button>
+                <div class="approval_form_top_text">
+                  <h4 class="approval_form_h4">Approve <%= usr_array.first %>'s Work</h4>
+                  <h5 class="approval_form_h5"><%= q.name %>, <%= t.tier_number %></h5>
+                </div>
+              </div>
+              <div class="approval_form_bottom">
+                <div class="approval_form_bottom_inner">
+                  <h3 class="approval_inner_h3">Tier Summary:</h3>
+                  <p class="approval_form_p">
+                    <span><%= t.name %></span><br>
+                    <%= t.description %><br><br>
+                    <span><%= usr_array.first %>'s photo of this recipe:</span>
+                  </p>
+                  <div class="feed_submit_image">
+                    <%= image_tag(feed_item.tier_image.detail.url) %>
+                  </div>
+                  <p class="approval_form_p">
+                    <span>What <%= usr_array.first %> said about this recipe: </span><br>
+                    <%= feed_item.tier_caption %>
+                  </p>
+                </div>
+              </div>
+            </div> <!-- closes approval_form -->
+
+          </div> <!-- closes .feed_textbox -->
+
+        </div> <!-- closes .feed_item -->
+
       <% end %> 
     <% end %>
 

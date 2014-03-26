@@ -18,5 +18,15 @@ $( document ).ready(function() {
     $(".tier_submit_form").addClass("hidden");
   });
 
+  $(".approval").click(function() {
+    var parent = $(this).closest('.feed_textbox');
+    $(".approval_form",parent).removeClass("hidden");
+  });
+
+  $(".close_approval_form").click(function() {
+    var parent = $(this).closest('.feed_textbox');
+    $(".approval_form",parent).addClass("hidden");
+  });
+
 }); //end document ready
 

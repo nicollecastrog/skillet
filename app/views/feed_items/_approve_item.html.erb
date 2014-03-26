@@ -1,0 +1,26 @@
+<div class="tier_submit_form centered hidden">
+  <div class="tier_submit_form_top">
+    <button class="close_tier_submit_form">X</button>
+    <div class="tier_submit_form_top_text">
+      <h4>Approve <%= @usr_array.first %>'s Work</h4>
+      <h5><%= @q.name %>, <%= @t.tier_number %></h5>
+    </div>
+  </div>
+  <div class="tier_submit_form_bottom">
+    <div class="tier_submit_form_bottom_inner">
+      <h3>Tier Summary:</h3>
+      <p>
+        <span><%= @t.name %></span><br>
+        <%= @t.description %><br><br>
+        <span><%= @usr_array.first %>'s photo of this recipe:</span>
+      </p>
+      <div class="feed_submit_image">
+        <%= image_tag(@feed_item.tier_image.detail.url) %>
+      </div>
+      <p>
+        <span>What <%= @usr_array.first %> said about this recipe: </span><br>
+        <%= @feed_item.tier_caption %>
+      </p>
+    </div>
+  </div>
+</div>
