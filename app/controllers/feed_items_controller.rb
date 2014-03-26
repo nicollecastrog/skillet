@@ -42,7 +42,6 @@ class FeedItemsController < ApplicationController
   # POST /feed_items
   # POST /feed_items.json
   def create
-    @feed_items = FeedItem.all
     @feed_item = FeedItem.new(params[:feed_item])
     @feed_item.user_email = current_user.email
     @feed_item.tier_id = params[:tier_id]
@@ -63,9 +62,13 @@ class FeedItemsController < ApplicationController
   # PUT /feed_items/1.json
   def update
     @feed_item = FeedItem.find(params[:id])
+    @feed_item.approver_email = current_user.email
 
     respond_to do |format|
       if @feed_item.update_attributes(params[:feed_item])
+        @feed_item.approval_votes += 1
+        @feed_item.save
+        @feed_item.givePoints(@feed_item.user_email, @feed_item.approver_email, @feed_item)
         format.html { redirect_to @feed_item, notice: 'Feed item was successfully updated.' }
         format.json { head :no_content }
       else
