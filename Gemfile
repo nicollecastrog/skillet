@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '3.2.17'
 
 # Bundle edge Rails instead:
@@ -16,6 +17,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rails_12factor'
 end
 
 group :production do
