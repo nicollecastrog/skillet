@@ -398,7 +398,7 @@ div.devise_btn {
   margin-bottom: 20px;
 }
 
-.feed_textbox button {
+.feed_textbox .approval {
   font-family: 'ostrich_sans_inlineregular', sans-serif;
   letter-spacing: 2px;
   font-size: 20px;
@@ -407,6 +407,26 @@ div.devise_btn {
   border: none;
   color: white;
   padding: 10px 12px;
+  text-align: center;
+}
+
+.feed_textbox .no_approval {
+  margin: 0 auto;
+  max-width: 60%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.feed_textbox .no_approval p {
+  font-family: 'ostrich_sans_inlineregular', sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: #F46F22;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  margin-bottom: 0px;
 }
 
 .quest_item {

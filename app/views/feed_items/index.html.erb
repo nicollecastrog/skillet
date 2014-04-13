@@ -1,6 +1,6 @@
 <div id="intro">
   <h1>Check out the live Feed</h1>
-  <p>See what recipes others have completed. These users have finished tiers that need someone else's approval vote before they can receive their hard-earned points. Take the time to "check" their work and earn bonus points yourself!</p>
+  <p>These users have finished tiers that need two approval votes from the Skillet community before they can receive their hard-earned points. Take the time to "check" their work and earn bonus points yourself!</p>
 </div>
 <div class="clear"></div>
 
@@ -26,8 +26,11 @@
             <h3 class="feed_textbox_h3"><%= q.name %></h3>
 
             <h4 class="feed_textbox_h4">Tier <%= t.tier_number %></h4>
-
-            <button class="approval">Approve</button>
+            <% if feed_item.user_email == current_user.email %>
+              <div class="no_approval"><p>Your Tier</p></div>
+            <% else %>
+              <button class="approval">Approve</button>
+            <% end %>
           </div> <!-- closes .feed_textbox -->
 
           <div class="approval_form centered hidden">
