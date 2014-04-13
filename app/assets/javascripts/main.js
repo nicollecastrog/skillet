@@ -7,16 +7,13 @@ $( document ).ready(function() {
 
   $(".less_more").click(function() {
     var parent = $(this).closest('.tier_item');
-    if($(this).html() == 'LESS'){
-        $(".tier_item_bottom",parent).slideDown("slow", function() {  
-          var button = $(this).closest('.less_more');
-          button.html('MORE');
-        });
+    var button = $(this).closest('.less_more');
+    if(button.html() == 'MORE'){
+      $(".tier_item_bottom",parent).slideDown("slow");
+      button.html('LESS');
      } else {
-        $(".tier_item_bottom",parent).slideUp("slow", function() {
-          var button = $(this).closest('.less_more');
-          button.html('LESS');
-        });
+      $(".tier_item_bottom",parent).slideUp("slow");
+      button.html('MORE');
     }
   }); //end of less_more click functionality (controls recipe visibility)
 
@@ -29,7 +26,6 @@ $( document ).ready(function() {
   });
 
   $(".approval").click(function(ev) {
-    // $(".approval_form").hide();
     var parent = $(this).closest('.feed_item');
     showForm(parent);
   });
