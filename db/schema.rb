@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140325201401) do
+ActiveRecord::Schema.define(:version => 20140413133049) do
 
   create_table "explorers", :force => true do |t|
     t.string   "name"
@@ -47,22 +47,22 @@ ActiveRecord::Schema.define(:version => 20140325201401) do
 
   create_table "quests", :force => true do |t|
     t.string   "name"
-    t.integer  "points_worth", :default => 10, :null => false
-    t.boolean  "status",  :default => false
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.integer  "points_worth"
+    t.boolean  "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.text     "description"
   end
 
   create_table "tiers", :force => true do |t|
     t.string   "name"
-    t.integer  "points_worth", :default => 10, :null => false
+    t.integer  "points_worth"
     t.text     "directions"
     t.string   "serving_size"
     t.string   "prep_time"
     t.integer  "quest_id"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.text     "ingredients"
     t.text     "description"
     t.string   "cook_time"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(:version => 20140325201401) do
     t.string   "provider"
     t.string   "gender"
     t.string   "name"
-    t.integer  "points",                 :default => 0,  :null => false
+    t.integer  "points",                 :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
