@@ -5,15 +5,22 @@ gem 'rails', '3.2.17'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'carrierwave', '=0.9.0'
 gem 'rmagick'
+gem "rack-timeout"
+gem "newrelic_rpm", "~> 3.5.7.57.beta"
 
-group :development do
+group :development, :test do
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :production do
+  gem 'pg'
+  gem 'unicorn'
 end
 
 
