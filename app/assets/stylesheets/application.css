@@ -9,13 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_01normalize
- *= require_02skeleton
- *= require_03styles
- *= require_explorers
- *= require_feed_items
- *= require_pots
- *= require_tiers
- *= require_users
  *= require_tree .
  */
