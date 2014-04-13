@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-1.11.0
 //= require main.js
 //= require rails.validations
+
