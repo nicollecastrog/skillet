@@ -7,11 +7,13 @@ gem 'rails', '3.2.17'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'carrierwave', '=0.9.0'
 gem 'rmagick'
 gem "rack-timeout"
 gem "newrelic_rpm", "~> 3.5.7.57.beta"
+gem "seedbank"
 
 group :development, :test do
   gem 'sqlite3'

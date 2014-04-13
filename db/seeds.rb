@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Pot.delete_all
-Quest.delete_all
-PotsQuest.delete_all
-Tier.delete_all
+# Pot.delete_all
+# Quest.delete_all
+# PotsQuest.delete_all
+# Tier.delete_all
 
 Pot.create(name: "Skill Building")
 Pot.create(name: "Breakfast & Brunch")
