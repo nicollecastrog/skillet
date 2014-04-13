@@ -1,18 +1,16 @@
 <%= form_for(@feed_item) do |f| %>
   <% if @feed_item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@feed_item.errors.count, "error") %> prohibited this feed_item from being saved:</h2>
-
-      <ul>
       <% @feed_item.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+      <p>ERROR: <%= msg %></p>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
+  <% if @feed_item.errors.any? == false%>
   <div class="actions approval_submit_btn">
     <%= f.submit "Approve"%>
   </div>
+  <% end %>
 
 <% end %>

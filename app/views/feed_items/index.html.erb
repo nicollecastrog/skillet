@@ -1,6 +1,6 @@
 <div id="intro">
   <h1>Check out the live Feed</h1>
-  <p>...to see what recipes others have completed. These users have finished tiers that need someone else's approval vote before they can receive their hard-earned points. Take the time to "check" their work and earn bonus points yourself! Remember, Skillet is a community.You need others to check your recipes too, so be a pal and and check theirs. Plus, it's fun to see what all the other chefs-to-be have been up to!</p>
+  <p>See what recipes others have completed. These users have finished tiers that need someone else's approval vote before they can receive their hard-earned points. Take the time to "check" their work and earn bonus points yourself!</p>
 </div>
 <div class="clear"></div>
 
@@ -54,7 +54,7 @@
                   <%= feed_item.tier_caption %>
                 </p>
                 <p class="approval_form_p">
-                  By clicking on the button below, you confirm that <%= usr_array.first %> appears to have completed this tier to the best of their ability. They have submitted a photo and caption that is relevant to the recipe.
+                  By clicking on the button below, you confirm that <span class="submitee"><%= usr_array.first %></span> appears to have completed this tier to the best of their ability. They have submitted a photo and caption that is relevant to the recipe.
                 </p>
                 <% @feed_item = feed_item %>
                 <%= render 'form' %>

@@ -3,6 +3,7 @@
 <div id="intro">
   <h1><%= @quest.name %></h1>
   <p><%= @quest.description %></p>
+  <h4>Total # of tiers: <%= @quest.tiers.count %></h4>
 </div>
 
 <%= render 'list_tiers' %>
