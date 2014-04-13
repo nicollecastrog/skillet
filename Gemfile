@@ -17,12 +17,12 @@ group :development, :test do
   gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rails_12factor'
 end
 
 group :production do
   gem 'pg'
   gem 'unicorn'
+  gem 'rails_12factor'
 end
 
 
