@@ -30,6 +30,11 @@
               <div class="no_approval"><p>Your Tier</p></div>
             <% else %>
               <button class="approval">Approve</button>
+              <% if feed_item.approval_votes > 0%>
+                <p class="pending">Pending &nbsp;&nbsp;<span><%= feed_item.approval_votes %></span>&nbsp;&nbsp; vote</p>
+              <% else %>
+                <p class="pending">Pending &nbsp;&nbsp;<span>2</span>&nbsp;&nbsp; votes</p>
+              <% end %>
             <% end %>
           </div> <!-- closes .feed_textbox -->
 

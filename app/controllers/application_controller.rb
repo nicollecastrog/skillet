@@ -10,5 +10,4 @@ class ApplicationController < ActionController::Base
   #   landing_path
   # end
   config.relative_url_root = ""
-  
 end
