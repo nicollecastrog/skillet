@@ -25,6 +25,8 @@ cookies.jpg: cookies-e3c3856714e1817eb60497a1ee548a9e.jpg
 cookies/index.jpg: cookies-e3c3856714e1817eb60497a1ee548a9e.jpg
 cupcakes.jpg: cupcakes-3d582a80fad35062356e82bbc3cd1ad5.jpg
 cupcakes/index.jpg: cupcakes-3d582a80fad35062356e82bbc3cd1ad5.jpg
+fallbacks/placeholder.png: fallbacks/placeholder-3d1a7ed97f95dbeeaa35470e3f29e6ca.png
+fallbacks/placeholder/index.png: fallbacks/placeholder-3d1a7ed97f95dbeeaa35470e3f29e6ca.png
 fb_btn.png: fb_btn-555cb1d6327d5036679d611d65524442.png
 fb_btn/index.png: fb_btn-555cb1d6327d5036679d611d65524442.png
 grilling.jpg: grilling-ef5300ed9b7cd53fbe3162714d754377.jpg
