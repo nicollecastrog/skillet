@@ -413,6 +413,7 @@ div.devise_btn {
   margin: 0 auto;
   max-width: 60%;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .feed_textbox .no_approval p {
