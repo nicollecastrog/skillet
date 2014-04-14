@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
-use Rack::Static, :urls => ['/carrierwave'], :root => 'tmp' # adding this line
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -60,6 +59,8 @@ module Skillet
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    use Rack::Static, :urls => ['/carrierwave'], :root => 'tmp' # adding this line
 
     config.to_prepare do
       Devise::SessionsController.layout "devise"
