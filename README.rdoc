@@ -16,7 +16,7 @@ Each cooking Quest represents a compact set of skills, making it simpler for beg
 
 Trying to connect an offline activity (such as cooking) to an online response (such as getting points) is tough. So how to keep users accountable? Ask them to submit a picture of their "rendition" of a given Tier. Follow a recipe, submit a photo and caption for your Tier completion and see your item show up on the live feed. The feed only shows items that need approval votes, once an item gets two votes, it disappears. And no, you little scoundrel, you can't vote for your own Tier submission, nice try!
 
-== So What About Cheater?
+== So What About Cheaters?
 
 Sure, you can cheat and take pictures online and submit them as your own "work", and sure, as the app stands now you'll get your points... but then you're not really going to learn how to cook are you? Yes, Skillet is a game, but the gaming portion of the app isn't its main feature: the fact that it teaches you HOW TO COOK is the main, the coolest feature! I have a few ideas to help discourage cheating in the future, such as only allowing photo submissions from Instragram (maybe it's slightly less likely that people will publicly declare a dish as their own work when that message is going out to all their friends and followers?). I have other ideas in mind, but I'm more than open to suggestions!!
 
