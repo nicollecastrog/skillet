@@ -402,7 +402,6 @@ div.devise_btn {
   font-family: 'ostrich_sans_inlineregular', sans-serif;
   letter-spacing: 2px;
   font-size: 20px;
-  margin-bottom: 20px;
   background-color: #19bebe;
   border: none;
   color: white;
@@ -414,7 +413,6 @@ div.devise_btn {
   margin: 0 auto;
   max-width: 60%;
   text-align: center;
-  padding-bottom: 20px;
 }
 
 .feed_textbox .no_approval p {
