@@ -9,5 +9,5 @@ class ApplicationController < ActionController::Base
   # def after_sign_out_path_for(resource_or_scope)
   #   landing_path
   # end
-  
+  config.relative_url_root = ""
 end
