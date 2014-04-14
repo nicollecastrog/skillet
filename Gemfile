@@ -14,6 +14,7 @@ gem 'rmagick'
 gem "rack-timeout"
 gem "newrelic_rpm", "~> 3.5.7.57.beta"
 gem "seedbank"
+gem "fog", "~> 1.3.1"
 
 group :development, :test do
   gem 'sqlite3'
