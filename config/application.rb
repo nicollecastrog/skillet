@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+use Rack::Static, :urls => ['/carrierwave'], :root => 'tmp' # adding this line
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
