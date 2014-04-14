@@ -1,3 +1,5 @@
+<div class="go_back"><%= link_to "Back To All Pots", pots_path %></div>
+
 <div id="intro">
   <h1>Edit Your Account</h1>
 </div>
@@ -6,28 +8,40 @@
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
     <%= devise_error_messages! %>
 
-    <div><%= f.label :email %><br />
-    <%= f.email_field :email, :autofocus => true %></div>
+    <div class="edit_account_field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
 
-    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, :autocomplete => "off" %></div>
+    <div class="edit_account_field">
+      <%= f.label :password %> <br><i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, :autocomplete => "off" %>
+    </div>
 
-    <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %></div>
+    <div class="edit_account_field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
 
-    <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password %></div>
+    <div class="edit_account_field">
+      <%= f.label :current_password %> <br><i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password %>
+    </div>
 
-    <div><%= f.submit "Update", :class => 'edit_account_btn' %></div>
+    <div id="edit_account_div">
+      <%= f.submit "Update", :class => 'edit_account_btn' %>
+    </div>
   <% end %>
 
-  <h3>Cancel my account</h3>
+  <p>Unhappy? We'd be sad to see you go, but if you choose to do so, just click the button below: <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'edit_account_btn' %></p>
 
-  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'edit_account_btn' %></p>
+  <p id="edit_account_last_p">Like your account just as it is? Cool, we do too!</p>
+  <div id="edit_account_div">
+    <%= link_to "Back", :back, :class => 'edit_account_btn edit_account_back' %>
+  </div>
 
-  <%= link_to "Back", :back %>
 </div> <!-- closes #content -->

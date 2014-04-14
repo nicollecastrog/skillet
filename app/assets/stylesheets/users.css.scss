@@ -11,14 +11,44 @@
   }
 }
 
+.edit_account_field {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  input {
+    margin-top: 6px;
+  }
+}
+
+#edit_account_div {
+  margin-top: 20px;
+}
+
+$font-stack-btn: 'ostrich_sans_inlineregular', sans-serif;
+
 .edit_account_btn {
-  font-family: 'ostrich_sans_inlineregular', sans-serif;
+  font-family: $font-stack-btn;
   letter-spacing: 2px;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background-color: #19bebe;
   border: none;
   color: white;
   padding: 10px 12px;
   text-align: center;
 }
+
+.edit_account_back {
+  background-color: #F46F22;
+}
+
+#edit_account_last_p {
+  padding-bottom: 5px;
+}
+
+.last {
+  padding-bottom: 20px;
+}
+
+
+
+
