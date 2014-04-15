@@ -19,6 +19,10 @@ bg4.jpg: bg4-ac23b7c8a3a87d579542ac42ce712cd4.jpg
 bg4/index.jpg: bg4-ac23b7c8a3a87d579542ac42ce712cd4.jpg
 bg6.png: bg6-a7795871edaa9eada7d9ac8dc8169b73.png
 bg6/index.png: bg6-a7795871edaa9eada7d9ac8dc8169b73.png
+bg7.png: bg7-e231b49ebd498a0aa8973affa41b4085.png
+bg7/index.png: bg7-e231b49ebd498a0aa8973affa41b4085.png
+bg8.png: bg8-6b4a6d0ad6a33e5d58bc565e617adb66.png
+bg8/index.png: bg8-6b4a6d0ad6a33e5d58bc565e617adb66.png
 bread.jpg: bread-f7145285a53abf6cd3422d1c2dbcbd6d.jpg
 bread/index.jpg: bread-f7145285a53abf6cd3422d1c2dbcbd6d.jpg
 cookies.jpg: cookies-e3c3856714e1817eb60497a1ee548a9e.jpg
@@ -53,8 +57,8 @@ tier_cake2.svg: tier_cake2-9d02fd931720c74d37000a915a230d70.svg
 tier_cake2/index.svg: tier_cake2-9d02fd931720c74d37000a915a230d70.svg
 application.js: application-87753b65f5d6739a0b44e10d38e6ee01.js
 application/index.js: application-87753b65f5d6739a0b44e10d38e6ee01.js
-application.css: application-2cddcfeeec5ec1117b896ef89013e230.css
-application/index.css: application-2cddcfeeec5ec1117b896ef89013e230.css
+application.css: application-37aea57fcae71e485e5b00b7376a2429.css
+application/index.css: application-37aea57fcae71e485e5b00b7376a2429.css
 generator_config.txt: generator_config-89e8e14220f484ca5e7be163a35676cb.txt
 generator_config/index.txt: generator_config-89e8e14220f484ca5e7be163a35676cb.txt
 ostrich_sans_inline-regular-webfont.eot: ostrich_sans_inline-regular-webfont-c7de8f9a727581898f847897bd5f1bcc.eot
