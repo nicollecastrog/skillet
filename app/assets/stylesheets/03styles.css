@@ -158,7 +158,7 @@ a {
 #intro {
   margin-left: 60px;
   display: inline-block;
-  min-width: 60%;
+  width: 60%;
   clear: none;
 }
 
