@@ -3,5 +3,55 @@
 <div id="intro">
   <% user_array = current_user.email.split('@') %>
   <h1><%= user_array.first %>'s Dashboard</h1>
-  <p>Find me in app/views/users/show.html.erb</p>
+  <p>See which Tiers you've completed on which Quests</p>
+</div>
+
+<div id="content"> 
+  <div id="quests_all">
+    <% myQuestsArr = [] %>
+
+    <% FeedItem.where(user_email: current_user.email).each do |f| %>
+
+      <% t = Tier.where(id: f.tier_id).first %>
+      <% q = Quest.where(id: t.quest_id).first %>
+      <% totalQ = Quest.all.count %>
+
+      <% myQuestsArr << q %>
+
+    <% end %>
+
+  <% myQuestsArr.each do |quest|%>
+      <div class="quest_item">
+
+        <div class="quest_icon">
+          <%= link_to(image_tag("tier_cake2.svg"), quest) %>
+        </div> <!-- closes .quest_icon -->
+
+        <div class="quest_info">
+
+          <div class="quest_top_info">
+            <h4><%= link_to "#{quest.name}", quest %></h4>
+            <p>Total # of tiers: <%= quest.tiers.count %></p>
+          </div> <!-- closes quest_top_info -->
+          <div class="quest_bottom_info">
+            <p class="quest_completion"><span>You've completed: </span><br>
+              <% quest.tiers.each do |tier|%>
+
+                <% tier.feed_items.where(user_email: current_user.email).each do |feed_item|%>
+
+                  <% t = Tier.where(id: feed_item.tier_id).first %>
+                  
+                  Tier <%= t.tier_number %>: <%= t.name %><br>
+
+                <% end %>
+              <% end %>
+            </p>
+          </div> <!-- closes quest_bottom_info -->
+
+        </div> <!-- closes quest_info -->
+
+      </div> <!-- closes quest_item -->
+  <% end %>
+
+</div>
 </div>

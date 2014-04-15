@@ -504,6 +504,11 @@ div.devise_btn {
   clear: both;
 } 
 
+.quest_bottom_info p span {
+  color: white;
+  font-size: 17px;
+}
+
 
 /*#tiers_all {
   margin-right: 5%;
