@@ -157,8 +157,9 @@ a {
 
 #intro {
   margin-left: 60px;
-  display: block;
-  clear: both;
+  display: inline-block;
+  min-width: 60%;
+  clear: none;
 }
 
 #intro h1 {
@@ -182,6 +183,7 @@ a {
   float: right;
   margin-right: 20px;
   margin-top: 20px;
+  max-width: 150px;
 }
 
 .go_back a, .go_back a:visited {
@@ -413,6 +415,7 @@ div.devise_btn {
   margin: 0 auto;
   max-width: 60%;
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .feed_textbox .no_approval p {
