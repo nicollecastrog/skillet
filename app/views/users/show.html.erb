@@ -1,2 +1,7 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="go_back"><%= link_to "Back To All Pots", pots_path %></div>
+
+<div id="intro">
+  <% user_array = current_user.email.split('@') %>
+  <h1><%= user_array.first %>'s Dashboard</h1>
+  <p>Find me in app/views/users/show.html.erb</p>
+</div>
